@@ -32,8 +32,10 @@ for i, r in enumerate(ranks):
 
     # Stacking the color channel matrices together back into a 3d tensor 
     m = np.stack(m, axis=-1)
+    axis[row, col].set_title(f'r = {r}')
     axis[row, col].imshow(m)
 
+axis[-1, -1].set_title('Original Image')
 axis[-1, -1].imshow(cat)
 plt.show()
 
